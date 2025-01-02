@@ -1,0 +1,35 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lb_l7rule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ELB
+paths:
+    /v2/{project_id}/elb/l7policies/{l7policy_id}:
+        GET:
+            tag: ELB
+    /v2/{project_id}/elb/l7policies/{l7policy_id}/rules:
+        POST:
+            tag: ELB
+    /v2/{project_id}/elb/l7policies/{l7policy_id}/rules/{rule_id}:
+        DELETE:
+            tag: ELB
+        GET:
+            tag: ELB
+        PUT:
+            tag: ELB
+    /v2/{project_id}/elb/listeners/{listener_id}:
+        GET:
+            tag: ELB
+    /v2/{project_id}/elb/loadbalancers:
+        GET:
+            tag: ELB
+    /v2/{project_id}/elb/loadbalancers/{loadbalancer_id}:
+        GET:
+            tag: ELB
+    /v2/{project_id}/elb/loadbalancers/{loadbalancer_id}/statuses:
+        GET:
+            tag: ELB

@@ -1,0 +1,193 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_workspace_desktop": {
+          "block": {
+            "attributes": {
+              "availability_zone": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "delete_user": {
+                "type": "bool",
+                "optional": true
+              },
+              "email_notification": {
+                "type": "bool",
+                "optional": true,
+                "forcenew": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "flavor_id": {
+                "type": "string",
+                "required": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "image_id": {
+                "type": "string",
+                "required": true
+              },
+              "image_type": {
+                "type": "string",
+                "required": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "power_action": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "power_action_type": {
+                "type": "string",
+                "optional": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "security_groups": {
+                "type": [
+                  "set",
+                  "string"
+                ],
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "status": {
+                "type": "string",
+                "computed": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true
+              },
+              "user_email": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "user_group": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "user_name": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "vpc_id": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              }
+            },
+            "block_types": {
+              "data_volume": {
+                "block": {
+                  "attributes": {
+                    "created_at": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "device": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "size": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "list"
+              },
+              "nic": {
+                "block": {
+                  "attributes": {
+                    "network_id": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "list"
+              },
+              "root_volume": {
+                "block": {
+                  "attributes": {
+                    "created_at": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "device": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "size": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "min_items": 1,
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "Workspace",
+            "name": "Workspace",
+            "catalog": "Business Applications",
+            "name_cn": "云桌面",
+            "catalog_cn": "企业应用"
+          }
+        }
+      }
+    }
+  }
+}

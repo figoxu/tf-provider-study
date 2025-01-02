@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_organizations_account_associate
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Organizations
+paths:
+    /v1/organizations/accounts/{account_id}:
+        GET:
+            tag: Organizations
+    /v1/organizations/accounts/{account_id}/move:
+        POST:
+            tag: Organizations
+    /v1/organizations/entities:
+        GET:
+            tag: Organizations
+    /v1/organizations/roots:
+        GET:
+            tag: Organizations

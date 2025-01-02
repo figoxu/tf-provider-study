@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_nat_dnat_rule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: NAT
+paths:
+    /v2/{project_id}/dnat_rules:
+        POST:
+            tag: NAT
+    /v2/{project_id}/dnat_rules/{dnat_rule_id}:
+        GET:
+            tag: NAT
+        PUT:
+            tag: NAT
+    /v2/{project_id}/nat_gateways/{nat_gateway_id}/dnat_rules/{dnat_rule_id}:
+        DELETE:
+            tag: NAT

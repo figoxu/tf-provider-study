@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dli_global_variable
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DLI
+paths:
+    /v1.0/{project_id}/variables:
+        GET:
+            tag: DLI
+        POST:
+            tag: DLI
+    /v1.0/{project_id}/variables/{var_name}:
+        DELETE:
+            tag: DLI
+        PUT:
+            tag: DLI

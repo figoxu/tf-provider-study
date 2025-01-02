@@ -1,0 +1,139 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_dli_queue": {
+          "block": {
+            "attributes": {
+              "create_time": {
+                "type": "number",
+                "computed": true
+              },
+              "cu_count": {
+                "type": "number",
+                "required": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "elastic_resource_pool_name": {
+                "type": "string",
+                "description": "The name of the elastic resource pool to which the queue belongs.",
+                "required": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "feature": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "platform": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true,
+                "default": "x86_64"
+              },
+              "queue_type": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true,
+                "default": "sql"
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "resource_mode": {
+                "type": "number",
+                "description": "The queue resource mode.",
+                "required": true,
+                "forcenew": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true,
+                "forcenew": true
+              }
+            },
+            "block_types": {
+              "scaling_policies": {
+                "block": {
+                  "attributes": {
+                    "impact_start_time": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "impact_stop_time": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "max_cu": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "min_cu": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "priority": {
+                      "type": "number",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "set"
+              },
+              "spark_driver": {
+                "block": {
+                  "attributes": {
+                    "max_concurrent": {
+                      "type": "number",
+                      "optional": true
+                    },
+                    "max_instance": {
+                      "type": "number",
+                      "optional": true
+                    },
+                    "max_prefetch_instance": {
+                      "type": "string",
+                      "optional": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "DLI",
+            "name": "Data Lake Insight",
+            "catalog": "Analytics",
+            "name_cn": "数据湖探索",
+            "catalog_cn": "大数据"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cts_tracker
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CTS
+paths:
+    /v3/{project_id}/tracker:
+        POST:
+            tag: CTS
+        PUT:
+            tag: CTS
+    /v3/{project_id}/trackers:
+        GET:
+            tag: CTS

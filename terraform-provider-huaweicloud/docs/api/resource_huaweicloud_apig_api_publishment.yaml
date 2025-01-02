@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_apig_api_publishment
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: APIG
+paths:
+    /v2/{project_id}/apigw/instances/{instance_id}/apis/{api_id}:
+        GET:
+            tag: APIG
+    /v2/{project_id}/apigw/instances/{instance_id}/apis/action:
+        POST:
+            tag: APIG
+    /v2/{project_id}/apigw/instances/{instance_id}/apis/publish/{api_id}:
+        GET:
+            tag: APIG
+        PUT:
+            tag: APIG

@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dms_rocketmq_user
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: RocketMQ
+paths:
+    /v2/{project_id}/instances/{instance_id}/users:
+        POST:
+            tag: RocketMQ
+    /v2/{project_id}/instances/{instance_id}/users/{user_name}:
+        DELETE:
+            tag: RocketMQ
+        GET:
+            tag: RocketMQ
+        PUT:
+            tag: RocketMQ

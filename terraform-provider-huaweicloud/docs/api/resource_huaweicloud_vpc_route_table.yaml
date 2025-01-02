@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_vpc_route_table
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: VPC
+paths:
+    /v1/{project_id}/routetables:
+        POST:
+            tag: VPC
+    /v1/{project_id}/routetables/{id}:
+        DELETE:
+            tag: VPC
+        GET:
+            tag: VPC
+        PUT:
+            tag: VPC
+    /v1/{project_id}/routetables/{id}/action:
+        POST:
+            tag: VPC

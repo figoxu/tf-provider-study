@@ -1,0 +1,28 @@
+info:
+    version: ""
+    title: resource_huaweicloud_waf_domain
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/instance:
+        POST:
+            tag: WAF
+    /v1/{project_id}/waf/instance/{instance_id}:
+        DELETE:
+            tag: WAF
+        GET:
+            tag: WAF
+        PUT:
+            tag: WAF
+    /v1/{project_id}/waf/instance/{instance_id}/protect-status:
+        PUT:
+            tag: WAF
+    /v1/{project_id}/waf/policy/{policy_id}:
+        DELETE:
+            tag: WAF
+        PATCH:
+            tag: WAF

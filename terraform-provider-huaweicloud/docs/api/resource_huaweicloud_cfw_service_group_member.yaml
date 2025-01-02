@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cfw_service_group_member
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CFW
+paths:
+    /v1/{project_id}/service-items:
+        GET:
+            tag: CFW
+        POST:
+            tag: CFW
+    /v1/{project_id}/service-items/{id}:
+        DELETE:
+            tag: CFW

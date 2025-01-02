@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dns_custom_line
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DNS
+paths:
+    /v2.1/customlines:
+        GET:
+            tag: DNS
+        POST:
+            tag: DNS
+    /v2.1/customlines/{line_id}:
+        DELETE:
+            tag: DNS
+        PUT:
+            tag: DNS

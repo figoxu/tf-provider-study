@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_aad_forward_rule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AAD
+paths:
+    /v1/aad/instances/{instance_id}/{ip}/rules:
+        GET:
+            tag: AAD
+    /v1/aad/instances/{instance_id}/{ip}/rules/{rule_id}:
+        PUT:
+            tag: AAD
+    /v1/aad/instances/{instance_id}/{ip}/rules/batch-create:
+        POST:
+            tag: AAD
+    /v1/aad/instances/{instance_id}/{ip}/rules/batch-delete:
+        POST:
+            tag: AAD

@@ -1,0 +1,29 @@
+info:
+    version: ""
+    title: resource_huaweicloud_vpcep_endpoint
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: VPCEP
+paths:
+    /v1/{project_id}/{resource_type}/{resource_id}/tags/action:
+        POST:
+            tag: VPCEP
+    /v1/{project_id}/vpc-endpoints:
+        POST:
+            tag: VPCEP
+    /v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}:
+        DELETE:
+            tag: VPCEP
+        GET:
+            tag: VPCEP
+        PUT:
+            tag: VPCEP
+    /v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}/policy:
+        PUT:
+            tag: VPCEP
+    /v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}/routetables:
+        PUT:
+            tag: VPCEP

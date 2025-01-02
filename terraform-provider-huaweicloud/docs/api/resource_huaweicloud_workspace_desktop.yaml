@@ -1,0 +1,41 @@
+info:
+    version: ""
+    title: resource_huaweicloud_workspace_desktop
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Workspace
+paths:
+    /v2/{project_id}/desktops:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/desktops/{desktop_id}:
+        DELETE:
+            tag: Workspace
+        GET:
+            tag: Workspace
+    /v2/{project_id}/desktops/{desktop_id}/networks:
+        GET:
+            tag: Workspace
+        PUT:
+            tag: Workspace
+    /v2/{project_id}/desktops/{id}/tags/action:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/desktops/rebuild:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/desktops/resize:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/volumes:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/volumes/expand:
+        POST:
+            tag: Workspace
+    /v2/{project_id}/workspace-sub-jobs:
+        GET:
+            tag: Workspace

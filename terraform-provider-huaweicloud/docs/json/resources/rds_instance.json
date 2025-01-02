@@ -1,0 +1,396 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_rds_instance": {
+          "block": {
+            "attributes": {
+              "auto_renew": {
+                "type": "string",
+                "optional": true
+              },
+              "availability_zone": {
+                "type": [
+                  "list",
+                  "string"
+                ],
+                "required": true,
+                "forcenew": true
+              },
+              "binlog_retention_hours": {
+                "type": "number",
+                "optional": true
+              },
+              "charging_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "collation": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "created": {
+                "type": "string",
+                "computed": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "dss_pool_id": {
+                "type": "string",
+                "optional": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "fixed_ip": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "flavor": {
+                "type": "string",
+                "required": true
+              },
+              "ha_replication_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "lower_case_table_names": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true
+              },
+              "maintain_begin": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "maintain_end": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "required": true
+              },
+              "nodes": {
+                "type": [
+                  "list",
+                  [
+                    "object",
+                    {
+                      "availability_zone": "string",
+                      "id": "string",
+                      "name": "string",
+                      "role": "string",
+                      "status": "string"
+                    }
+                  ]
+                ],
+                "computed": true
+              },
+              "param_group_id": {
+                "type": "string",
+                "optional": true
+              },
+              "period": {
+                "type": "number",
+                "optional": true,
+                "forcenew": true
+              },
+              "period_unit": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true
+              },
+              "power_action": {
+                "type": "string",
+                "optional": true
+              },
+              "private_dns_name_prefix": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "private_dns_names": {
+                "type": [
+                  "list",
+                  "string"
+                ],
+                "computed": true
+              },
+              "private_ips": {
+                "type": [
+                  "list",
+                  "string"
+                ],
+                "computed": true
+              },
+              "public_ips": {
+                "type": [
+                  "list",
+                  "string"
+                ],
+                "computed": true
+              },
+              "read_write_permissions": {
+                "type": "string",
+                "optional": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "rotate_day": {
+                "type": "number",
+                "optional": true
+              },
+              "seconds_level_monitoring_enabled": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "seconds_level_monitoring_interval": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "secret_id": {
+                "type": "string",
+                "optional": true
+              },
+              "secret_name": {
+                "type": "string",
+                "optional": true
+              },
+              "secret_version": {
+                "type": "string",
+                "optional": true
+              },
+              "security_group_id": {
+                "type": "string",
+                "required": true
+              },
+              "slow_log_show_original_status": {
+                "type": "string",
+                "optional": true
+              },
+              "ssl_enable": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "status": {
+                "type": "string",
+                "computed": true
+              },
+              "subnet_id": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "switch_strategy": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true
+              },
+              "tde_enabled": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "time_zone": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "vpc_id": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              }
+            },
+            "block_types": {
+              "backup_strategy": {
+                "block": {
+                  "attributes": {
+                    "keep_days": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "period": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "start_time": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              },
+              "db": {
+                "block": {
+                  "attributes": {
+                    "password": {
+                      "type": "string",
+                      "optional": true,
+                      "sensitive": true
+                    },
+                    "port": {
+                      "type": "number",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "required": true,
+                      "forcenew": true
+                    },
+                    "user_name": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "version": {
+                      "type": "string",
+                      "required": true,
+                      "forcenew": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "min_items": 1,
+                "max_items": 1
+              },
+              "msdtc_hosts": {
+                "block": {
+                  "attributes": {
+                    "host_name": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "computed": true
+                    },
+                    "ip": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "set"
+              },
+              "parameters": {
+                "block": {
+                  "attributes": {
+                    "name": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "value": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "set"
+              },
+              "restore": {
+                "block": {
+                  "attributes": {
+                    "backup_id": {
+                      "type": "string",
+                      "required": true,
+                      "forcenew": true
+                    },
+                    "database_name": {
+                      "type": [
+                        "map",
+                        "string"
+                      ],
+                      "optional": true,
+                      "forcenew": true
+                    },
+                    "instance_id": {
+                      "type": "string",
+                      "required": true,
+                      "forcenew": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "max_items": 1
+              },
+              "volume": {
+                "block": {
+                  "attributes": {
+                    "disk_encryption_id": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true,
+                      "forcenew": true
+                    },
+                    "limit_size": {
+                      "type": "number",
+                      "optional": true
+                    },
+                    "size": {
+                      "type": "number",
+                      "required": true
+                    },
+                    "trigger_threshold": {
+                      "type": "number",
+                      "optional": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "required": true,
+                      "forcenew": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "min_items": 1,
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "RDS",
+            "name": "Relational Database Service",
+            "catalog": "Databases",
+            "name_cn": "云数据库",
+            "catalog_cn": "数据库"
+          }
+        }
+      }
+    }
+  }
+}

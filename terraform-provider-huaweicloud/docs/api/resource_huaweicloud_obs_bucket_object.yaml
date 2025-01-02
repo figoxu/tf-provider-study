@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_obs_bucket_object
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: OBS
+paths:
+    /:
+        HEAD:
+            tag: OBS
+    /{ObjectName}:
+        DELETE:
+            tag: OBS
+        HEAD:
+            tag: OBS
+        PUT:
+            tag: OBS

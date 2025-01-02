@@ -1,0 +1,80 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_organizations_account": {
+          "block": {
+            "attributes": {
+              "agency_name": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "email": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "intl_number_prefix": {
+                "type": "string",
+                "computed": true
+              },
+              "joined_at": {
+                "type": "string",
+                "computed": true
+              },
+              "joined_method": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "description": "Specifies the name of the account.",
+                "required": true,
+                "forcenew": true
+              },
+              "parent_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "phone": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true
+              },
+              "urn": {
+                "type": "string",
+                "computed": true
+              }
+            }
+          },
+          "product": {
+            "short": "Organizations",
+            "name": "Organizations",
+            "catalog": "Management & Governance",
+            "name_cn": "组织",
+            "catalog_cn": "管理与监管"
+          }
+        }
+      }
+    }
+  }
+}

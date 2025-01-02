@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_smn_message_template
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: SMN
+paths:
+    /v2/{project_id}/notifications/message_template:
+        POST:
+            tag: SMN
+    /v2/{project_id}/notifications/message_template/{message_template_id}:
+        DELETE:
+            tag: SMN
+        GET:
+            tag: SMN
+        PUT:
+            tag: SMN

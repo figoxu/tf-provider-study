@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_identity_group_membership
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: IAM
+paths:
+    /v3/groups/{group_id}:
+        GET:
+            tag: IAM
+    /v3/groups/{group_id}/users:
+        GET:
+            tag: IAM
+    /v3/groups/{group_id}/users/{user_id}:
+        DELETE:
+            tag: IAM
+        PUT:
+            tag: IAM

@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lb_certificate
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ELB
+paths:
+    /v2/{project_id}/elb/certificates:
+        POST:
+            tag: ELB
+    /v2/{project_id}/elb/certificates/{certificate_id}:
+        DELETE:
+            tag: ELB
+        GET:
+            tag: ELB
+        PUT:
+            tag: ELB

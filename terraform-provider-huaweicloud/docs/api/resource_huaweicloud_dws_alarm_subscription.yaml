@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dws_alarm_subscription
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DWS
+paths:
+    /v2/{project_id}/alarm-subs:
+        GET:
+            tag: DWS
+        POST:
+            tag: DWS
+    /v2/{project_id}/alarm-subs/{alarm_sub_id}:
+        DELETE:
+            tag: DWS
+        PUT:
+            tag: DWS

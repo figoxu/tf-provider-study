@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_vpn_connection_health_check
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: VPN
+paths:
+    /v5/{project_id}/connection-monitors:
+        POST:
+            tag: VPN
+    /v5/{project_id}/connection-monitors/{id}:
+        DELETE:
+            tag: VPN
+        GET:
+            tag: VPN

@@ -1,0 +1,24 @@
+info:
+    version: ""
+    title: resource_huaweicloud_live_domain
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Live
+paths:
+    /v1/{project_id}/domain:
+        DELETE:
+            tag: Live
+        GET:
+            tag: Live
+        POST:
+            tag: Live
+        PUT:
+            tag: Live
+    /v1/{project_id}/domains_mapping:
+        DELETE:
+            tag: Live
+        PUT:
+            tag: Live

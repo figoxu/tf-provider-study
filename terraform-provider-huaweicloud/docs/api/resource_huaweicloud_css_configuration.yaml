@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_css_configuration
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CSS
+paths:
+    /v1.0/{project_id}/clusters/{cluster_id}/ymls/update:
+        POST:
+            tag: CSS
+    /v1.0/{project_id}/clusters/{id}/ymls/joblists:
+        GET:
+            tag: CSS
+    /v1.0/{project_id}/clusters/{id}/ymls/template:
+        GET:
+            tag: CSS
+    /v1.0/{project_id}/clusters/{id}/ymls/update:
+        POST:
+            tag: CSS

@@ -1,0 +1,30 @@
+info:
+    version: ""
+    title: resource_huaweicloud_vpc_subnet
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: VPC
+paths:
+    /v1/{project_id}/subnets:
+        POST:
+            tag: VPC
+    /v1/{project_id}/subnets/{id}:
+        GET:
+            tag: VPC
+    /v1/{project_id}/vpcs/{vpcid}/subnets/{id}:
+        DELETE:
+            tag: VPC
+        PUT:
+            tag: VPC
+    /v2.0/{project_id}/subnets/{id}/tags:
+        GET:
+            tag: VPC
+    /v2.0/{project_id}/subnets/{id}/tags/action:
+        POST:
+            tag: VPC
+    /v2/nameservers:
+        GET:
+            tag: DNS

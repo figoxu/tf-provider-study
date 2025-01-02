@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cc_network_instance
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CC
+paths:
+    /v3/{domain_id}/ccaas/network-instances:
+        POST:
+            tag: CC
+    /v3/{domain_id}/ccaas/network-instances/{id}:
+        DELETE:
+            tag: CC
+        GET:
+            tag: CC
+        PUT:
+            tag: CC

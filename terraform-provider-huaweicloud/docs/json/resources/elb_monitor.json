@@ -1,0 +1,97 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_elb_monitor": {
+          "block": {
+            "attributes": {
+              "created_at": {
+                "type": "string",
+                "computed": true
+              },
+              "domain_name": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "enabled": {
+                "type": "bool",
+                "optional": true,
+                "default": true
+              },
+              "http_method": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "interval": {
+                "type": "number",
+                "required": true
+              },
+              "max_retries": {
+                "type": "number",
+                "required": true
+              },
+              "max_retries_down": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true
+              },
+              "pool_id": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "port": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "protocol": {
+                "type": "string",
+                "required": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "status_code": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "timeout": {
+                "type": "number",
+                "required": true
+              },
+              "updated_at": {
+                "type": "string",
+                "computed": true
+              },
+              "url_path": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              }
+            }
+          },
+          "product": {
+            "short": "ELB",
+            "name": "Elastic Load Balance",
+            "catalog": "Networking",
+            "name_cn": "弹性负载均衡",
+            "catalog_cn": "网络"
+          }
+        }
+      }
+    }
+  }
+}

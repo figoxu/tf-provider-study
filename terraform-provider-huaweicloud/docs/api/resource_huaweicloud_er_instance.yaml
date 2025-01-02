@@ -1,0 +1,26 @@
+info:
+    version: ""
+    title: resource_huaweicloud_er_instance
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ER
+paths:
+    /v3/{project_id}/{resource_type}/{resource_id}/tags/action:
+        POST:
+            tag: ER
+    /v3/{project_id}/enterprise-router/instances:
+        POST:
+            tag: ER
+    /v3/{project_id}/enterprise-router/instances/{er_id}:
+        DELETE:
+            tag: ER
+        GET:
+            tag: ER
+        PUT:
+            tag: ER
+    /v3/{project_id}/enterprise-router/instances/{er_id}/change-availability-zone-ids:
+        POST:
+            tag: ER

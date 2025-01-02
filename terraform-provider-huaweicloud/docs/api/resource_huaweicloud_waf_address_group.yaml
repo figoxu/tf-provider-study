@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_waf_address_group
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/ip-group/{id}:
+        DELETE:
+            tag: WAF
+        GET:
+            tag: WAF
+        PUT:
+            tag: WAF
+    /v1/{project_id}/waf/ip-groups:
+        POST:
+            tag: WAF

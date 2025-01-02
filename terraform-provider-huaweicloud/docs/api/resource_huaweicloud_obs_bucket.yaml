@@ -1,0 +1,98 @@
+info:
+    version: ""
+    title: resource_huaweicloud_obs_bucket
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: OBS
+paths:
+    /:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        HEAD:
+            tag: OBS
+        PUT:
+            tag: OBS
+    /v1.0/enterprise-projects/{enterprise_project_id}/resources-migrate:
+        POST:
+            tag: EPS
+    ?acl:
+        PUT:
+            tag: OBS
+    ?cors:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?customdomain:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?delete:
+        POST:
+            tag: OBS
+    ?encryption:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?lifecycle:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?logging:
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?policy:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?quota:
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?storageClass:
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?storageinfo:
+        GET:
+            tag: OBS
+    ?tagging:
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?versioning:
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS
+    ?website:
+        DELETE:
+            tag: OBS
+        GET:
+            tag: OBS
+        PUT:
+            tag: OBS

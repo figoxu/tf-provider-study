@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_modelarts_network
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ModelArts
+paths:
+    /v1/{project_id}/networks:
+        POST:
+            tag: ModelArts
+    /v1/{project_id}/networks/{id}:
+        DELETE:
+            tag: ModelArts
+        GET:
+            tag: ModelArts
+        PATCH:
+            tag: ModelArts

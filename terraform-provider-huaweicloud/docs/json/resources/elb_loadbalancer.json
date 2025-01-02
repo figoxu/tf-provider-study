@@ -1,0 +1,226 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_elb_loadbalancer": {
+          "block": {
+            "attributes": {
+              "auto_renew": {
+                "type": "string",
+                "optional": true
+              },
+              "availability_zone": {
+                "type": [
+                  "set",
+                  "string"
+                ],
+                "required": true
+              },
+              "backend_subnets": {
+                "type": [
+                  "set",
+                  "string"
+                ],
+                "optional": true,
+                "computed": true
+              },
+              "bandwidth_charge_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "bandwidth_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "bandwidth_size": {
+                "type": "number",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "charge_mode": {
+                "type": "string",
+                "computed": true
+              },
+              "charging_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "created_at": {
+                "type": "string",
+                "computed": true
+              },
+              "cross_vpc_backend": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "deletion_protection_enable": {
+                "type": "bool",
+                "optional": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "force_delete": {
+                "type": "bool",
+                "optional": true
+              },
+              "guaranteed": {
+                "type": "bool",
+                "computed": true
+              },
+              "gw_flavor_id": {
+                "type": "string",
+                "computed": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "iptype": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "ipv4_address": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "ipv4_eip": {
+                "type": "string",
+                "computed": true
+              },
+              "ipv4_eip_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "ipv4_port_id": {
+                "type": "string",
+                "computed": true
+              },
+              "ipv4_subnet_id": {
+                "type": "string",
+                "description": "the IPv4 subnet ID of the subnet where the load balancer resides",
+                "optional": true
+              },
+              "ipv6_address": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "ipv6_bandwidth_id": {
+                "type": "string",
+                "optional": true
+              },
+              "ipv6_eip": {
+                "type": "string",
+                "computed": true
+              },
+              "ipv6_eip_id": {
+                "type": "string",
+                "computed": true
+              },
+              "ipv6_network_id": {
+                "type": "string",
+                "description": "the ID of the subnet where the load balancer resides",
+                "optional": true
+              },
+              "l4_flavor_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "l7_flavor_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "loadbalancer_type": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "name": {
+                "type": "string",
+                "required": true
+              },
+              "period": {
+                "type": "number",
+                "optional": true
+              },
+              "period_unit": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_reason": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_status": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "sharetype": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true
+              },
+              "updated_at": {
+                "type": "string",
+                "computed": true
+              },
+              "vpc_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "waf_failure_action": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              }
+            }
+          },
+          "product": {
+            "short": "ELB",
+            "name": "Elastic Load Balance",
+            "catalog": "Networking",
+            "name_cn": "弹性负载均衡",
+            "catalog_cn": "网络"
+          }
+        }
+      }
+    }
+  }
+}

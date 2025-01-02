@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_identity_acl
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: IAM
+paths:
+    /v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy:
+        GET:
+            tag: IAM
+        PUT:
+            tag: IAM
+    /v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy:
+        GET:
+            tag: IAM
+        PUT:
+            tag: IAM

@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lts_host_group
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: LTS
+paths:
+    /v3/{project_id}/lts/host-group:
+        DELETE:
+            tag: LTS
+        POST:
+            tag: LTS
+        PUT:
+            tag: LTS
+    /v3/{project_id}/lts/host-group-list:
+        POST:
+            tag: LTS

@@ -1,0 +1,19 @@
+info:
+    version: ""
+    title: resource_huaweicloud_organizations_account_invite_accepter
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Organizations
+paths:
+    /v1/organizations/handshakes/{handshake_id}:
+        GET:
+            tag: Organizations
+    /v1/organizations/leave:
+        POST:
+            tag: Organizations
+    /v1/received-handshakes/{handshake_id}/accept:
+        POST:
+            tag: Organizations

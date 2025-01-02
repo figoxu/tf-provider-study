@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_codearts_project
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CodeArts
+paths:
+    /v4/project:
+        POST:
+            tag: CodeArts
+    /v4/projects/{id}:
+        DELETE:
+            tag: CodeArts
+        GET:
+            tag: CodeArts
+        PUT:
+            tag: CodeArts

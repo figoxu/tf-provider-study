@@ -1,0 +1,39 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ram_resource_share
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: RAM
+paths:
+    /v1/resource-share-associations/search:
+        POST:
+            tag: RAM
+    /v1/resource-shares:
+        POST:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}:
+        DELETE:
+            tag: RAM
+        PUT:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}/associate:
+        POST:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}/associated-permissions:
+        GET:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}/disassociate:
+        POST:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}/tags/create:
+        POST:
+            tag: RAM
+    /v1/resource-shares/{resource_share_id}/tags/delete:
+        POST:
+            tag: RAM
+    /v1/resource-shares/search:
+        POST:
+            tag: RAM

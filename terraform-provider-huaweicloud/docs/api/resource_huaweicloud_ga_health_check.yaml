@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ga_health_check
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: GA
+paths:
+    /v1/health-checks:
+        POST:
+            tag: GA
+    /v1/health-checks/{health_check_id}:
+        DELETE:
+            tag: GA
+        GET:
+            tag: GA
+        PUT:
+            tag: GA

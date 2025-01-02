@@ -1,0 +1,19 @@
+info:
+    version: ""
+    title: resource_huaweicloud_organizations_trusted_service
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Organizations
+paths:
+    /v1/organizations/trusted-services:
+        GET:
+            tag: Organizations
+    /v1/organizations/trusted-services/disable:
+        POST:
+            tag: Organizations
+    /v1/organizations/trusted-services/enable:
+        POST:
+            tag: Organizations

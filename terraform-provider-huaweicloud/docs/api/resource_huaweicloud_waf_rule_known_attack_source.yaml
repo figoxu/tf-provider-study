@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_waf_rule_known_attack_source
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/policy/{policy_id}/punishment:
+        POST:
+            tag: WAF
+    /v1/{project_id}/waf/policy/{policy_id}/punishment/{rule_id}:
+        DELETE:
+            tag: WAF
+        GET:
+            tag: WAF
+        PUT:
+            tag: WAF

@@ -1,0 +1,131 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_apig_group": {
+          "block": {
+            "attributes": {
+              "created_at": {
+                "type": "string",
+                "description": "The creation time of the group, in RFC3339 format.",
+                "computed": true
+              },
+              "description": {
+                "type": "string",
+                "description": "The group description.",
+                "optional": true
+              },
+              "domain_access_enabled": {
+                "type": "bool",
+                "description": "Specifies whether to use the debugging domain name to access the APIs within the group.",
+                "optional": true,
+                "computed": true
+              },
+              "force_destroy": {
+                "type": "bool",
+                "description": "Whether to delete all sub-resources (for API) from this group.",
+                "optional": true,
+                "computed": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "instance_id": {
+                "type": "string",
+                "description": "The ID of the dedicated instance to which the group belongs.",
+                "required": true,
+                "forcenew": true
+              },
+              "name": {
+                "type": "string",
+                "description": "The group name.",
+                "required": true
+              },
+              "region": {
+                "type": "string",
+                "description": "The region where the dedicated instance is located.",
+                "computed": true
+              },
+              "updated_at": {
+                "type": "string",
+                "description": "The latest update time of the group, in RFC3339 format.",
+                "computed": true
+              }
+            },
+            "block_types": {
+              "environment": {
+                "block": {
+                  "attributes": {
+                    "environment_id": {
+                      "type": "string",
+                      "description": "The ID of the environment to which the variables belongs.",
+                      "required": true
+                    }
+                  },
+                  "block_types": {
+                    "variable": {
+                      "block": {
+                        "attributes": {
+                          "id": {
+                            "type": "string",
+                            "description": "The ID of the variable that the group has.",
+                            "computed": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The variable name.",
+                            "required": true
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The variable value.",
+                            "required": true
+                          }
+                        },
+                        "description": "The array of one or more environment variables."
+                      },
+                      "nesting_mode": "set",
+                      "min_items": 1
+                    }
+                  },
+                  "description": "The array of one or more environments of the associated group."
+                },
+                "nesting_mode": "set"
+              },
+              "url_domains": {
+                "block": {
+                  "attributes": {
+                    "is_http_redirect_to_https": {
+                      "type": "bool",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "min_ssl_version": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "set",
+                "max_items": 5
+              }
+            }
+          },
+          "product": {
+            "short": "APIG",
+            "name": "API Gateway",
+            "catalog": "Middleware",
+            "name_cn": "API网关",
+            "catalog_cn": "应用中间件"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+info:
+    version: ""
+    title: data_source_huaweicloud_cdm_flavors
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CDM
+paths:
+    /v1.1/{project_id}/datastores:
+        GET:
+            tag: CDM
+    /v1.1/{project_id}/datastores/{id}/flavors:
+        GET:
+            tag: CDM

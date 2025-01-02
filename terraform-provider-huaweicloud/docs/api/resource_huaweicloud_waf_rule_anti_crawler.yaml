@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_waf_rule_anti_crawler
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/policy/{policy_id}/anticrawler:
+        POST:
+            tag: WAF
+        PUT:
+            tag: WAF
+    /v1/{project_id}/waf/policy/{policy_id}/anticrawler/{rule_id}:
+        DELETE:
+            tag: WAF
+        GET:
+            tag: WAF
+        PUT:
+            tag: WAF

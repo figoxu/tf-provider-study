@@ -1,0 +1,394 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_elb_l7policy": {
+          "block": {
+            "attributes": {
+              "action": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true,
+                "default": "REDIRECT_TO_POOL"
+              },
+              "created_at": {
+                "type": "string",
+                "computed": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "listener_id": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "priority": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "provisioning_status": {
+                "type": "string",
+                "computed": true
+              },
+              "redirect_listener_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "redirect_pool_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "updated_at": {
+                "type": "string",
+                "computed": true
+              }
+            },
+            "block_types": {
+              "fixed_response_config": {
+                "block": {
+                  "attributes": {
+                    "content_type": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "message_body": {
+                      "type": "string",
+                      "optional": true
+                    },
+                    "status_code": {
+                      "type": "string",
+                      "required": true
+                    }
+                  },
+                  "block_types": {
+                    "insert_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value_type": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "remove_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "traffic_limit_config": {
+                      "block": {
+                        "attributes": {
+                          "burst": {
+                            "type": "number",
+                            "optional": true
+                          },
+                          "per_source_ip_qps": {
+                            "type": "number",
+                            "optional": true
+                          },
+                          "qps": {
+                            "type": "number",
+                            "optional": true
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              },
+              "redirect_pools_config": {
+                "block": {
+                  "attributes": {
+                    "pool_id": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "weight": {
+                      "type": "number",
+                      "optional": true,
+                      "computed": true
+                    }
+                  }
+                },
+                "nesting_mode": "set"
+              },
+              "redirect_pools_extend_config": {
+                "block": {
+                  "attributes": {
+                    "rewrite_url_enabled": {
+                      "type": "bool",
+                      "optional": true,
+                      "computed": true
+                    }
+                  },
+                  "block_types": {
+                    "insert_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value_type": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "remove_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "rewrite_url_config": {
+                      "block": {
+                        "attributes": {
+                          "host": {
+                            "type": "string",
+                            "optional": true,
+                            "computed": true
+                          },
+                          "path": {
+                            "type": "string",
+                            "optional": true,
+                            "computed": true
+                          },
+                          "query": {
+                            "type": "string",
+                            "optional": true
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "traffic_limit_config": {
+                      "block": {
+                        "attributes": {
+                          "burst": {
+                            "type": "number",
+                            "optional": true
+                          },
+                          "per_source_ip_qps": {
+                            "type": "number",
+                            "optional": true
+                          },
+                          "qps": {
+                            "type": "number",
+                            "optional": true
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              },
+              "redirect_pools_sticky_session_config": {
+                "block": {
+                  "attributes": {
+                    "enable": {
+                      "type": "bool",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "optional": true,
+                      "computed": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              },
+              "redirect_url_config": {
+                "block": {
+                  "attributes": {
+                    "host": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "path": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "port": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "protocol": {
+                      "type": "string",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "query": {
+                      "type": "string",
+                      "optional": true
+                    },
+                    "status_code": {
+                      "type": "string",
+                      "required": true
+                    }
+                  },
+                  "block_types": {
+                    "insert_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value": {
+                                  "type": "string",
+                                  "required": true
+                                },
+                                "value_type": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    },
+                    "remove_headers_config": {
+                      "block": {
+                        "block_types": {
+                          "configs": {
+                            "block": {
+                              "attributes": {
+                                "key": {
+                                  "type": "string",
+                                  "required": true
+                                }
+                              }
+                            },
+                            "nesting_mode": "set",
+                            "min_items": 1
+                          }
+                        }
+                      },
+                      "nesting_mode": "list",
+                      "max_items": 1
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "ELB",
+            "name": "Elastic Load Balance",
+            "catalog": "Networking",
+            "name_cn": "弹性负载均衡",
+            "catalog_cn": "网络"
+          }
+        }
+      }
+    }
+  }
+}

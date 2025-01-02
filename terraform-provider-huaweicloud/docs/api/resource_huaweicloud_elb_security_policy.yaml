@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_elb_security_policy
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ELB
+paths:
+    /v3/{project_id}/elb/security-policies:
+        POST:
+            tag: ELB
+    /v3/{project_id}/elb/security-policies/{security_policy_id}:
+        DELETE:
+            tag: ELB
+        GET:
+            tag: ELB
+        PUT:
+            tag: ELB

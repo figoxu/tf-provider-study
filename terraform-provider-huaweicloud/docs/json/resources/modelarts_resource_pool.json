@@ -1,0 +1,277 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_modelarts_resource_pool": {
+          "block": {
+            "attributes": {
+              "auto_renew": {
+                "type": "string",
+                "optional": true
+              },
+              "charging_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the resource pool.",
+                "optional": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the resource pool.",
+                "required": true,
+                "forcenew": true
+              },
+              "network_id": {
+                "type": "string",
+                "description": "The ModelArts network ID of the resource pool.",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "period": {
+                "type": "number",
+                "optional": true,
+                "forcenew": true
+              },
+              "period_unit": {
+                "type": "string",
+                "optional": true,
+                "forcenew": true
+              },
+              "prefix": {
+                "type": "string",
+                "description": "The prefix of the user-defined node name of the resource pool.",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "resource_pool_id": {
+                "type": "string",
+                "description": "The resource ID of the resource pool.",
+                "computed": true
+              },
+              "scope": {
+                "type": [
+                  "set",
+                  "string"
+                ],
+                "description": "List of job types supported by the resource pool.",
+                "required": true
+              },
+              "status": {
+                "type": "string",
+                "description": "The status of the resource pool.",
+                "computed": true
+              },
+              "subnet_id": {
+                "type": "string",
+                "description": "The network ID of a subnet.",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "vpc_id": {
+                "type": "string",
+                "description": "The VPC ID.",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "workspace_id": {
+                "type": "string",
+                "description": "Workspace ID, which defaults to 0.",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              }
+            },
+            "block_types": {
+              "clusters": {
+                "block": {
+                  "attributes": {
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the CCE cluster.",
+                      "computed": true
+                    },
+                    "provider_id": {
+                      "type": "string",
+                      "description": "The ID of the CCE cluster.",
+                      "required": true,
+                      "forcenew": true
+                    }
+                  },
+                  "description": "The list of the CCE clusters."
+                },
+                "nesting_mode": "list",
+                "forcenew": true
+              },
+              "resources": {
+                "block": {
+                  "attributes": {
+                    "count": {
+                      "type": "number",
+                      "description": "Number of resources of the corresponding flavors.",
+                      "required": true
+                    },
+                    "flavor_id": {
+                      "type": "string",
+                      "description": "The resource flavor ID.",
+                      "required": true
+                    },
+                    "labels": {
+                      "type": [
+                        "map",
+                        "string"
+                      ],
+                      "description": "The labels of resource pool.",
+                      "optional": true
+                    },
+                    "max_count": {
+                      "type": "number",
+                      "description": "The max number of resources of the corresponding flavors.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "node_pool": {
+                      "type": "string",
+                      "description": "The name of resource pool nodes.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "post_install": {
+                      "type": "string",
+                      "description": "The script to be executed after security.",
+                      "optional": true
+                    },
+                    "security_group_ids": {
+                      "type": [
+                        "list",
+                        "string"
+                      ],
+                      "description": "The security group IDs.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "subnet_id": {
+                      "type": "string",
+                      "description": "The network ID of a subnet.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "tags": {
+                      "type": [
+                        "map",
+                        "string"
+                      ],
+                      "optional": true
+                    },
+                    "vpc_id": {
+                      "type": "string",
+                      "description": "The VPC ID.",
+                      "optional": true,
+                      "computed": true
+                    }
+                  },
+                  "block_types": {
+                    "azs": {
+                      "block": {
+                        "attributes": {
+                          "az": {
+                            "type": "string",
+                            "description": "The AZ name.",
+                            "optional": true,
+                            "computed": true
+                          },
+                          "count": {
+                            "type": "number",
+                            "description": "Number of nodes.",
+                            "optional": true,
+                            "computed": true
+                          }
+                        },
+                        "description": "AZs for resource pool nodes."
+                      },
+                      "nesting_mode": "list"
+                    },
+                    "taints": {
+                      "block": {
+                        "attributes": {
+                          "effect": {
+                            "type": "string",
+                            "description": "The effect of the taint.",
+                            "required": true
+                          },
+                          "key": {
+                            "type": "string",
+                            "description": "The key of the taint.",
+                            "required": true
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the taint.",
+                            "optional": true,
+                            "computed": true
+                          }
+                        },
+                        "description": "The taints added to nodes."
+                      },
+                      "nesting_mode": "list"
+                    }
+                  },
+                  "description": "List of resource specifications in the resource pool."
+                },
+                "nesting_mode": "list",
+                "min_items": 1
+              },
+              "user_login": {
+                "block": {
+                  "attributes": {
+                    "key_pair_name": {
+                      "type": "string",
+                      "description": "The key pair name of the login user.",
+                      "optional": true,
+                      "computed": true,
+                      "forcenew": true
+                    },
+                    "password": {
+                      "type": "string",
+                      "description": "The password of the login user.",
+                      "optional": true,
+                      "forcenew": true,
+                      "sensitive": true
+                    }
+                  },
+                  "description": "The user login info of the resource pool."
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "ModelArts",
+            "name": "ModelArts",
+            "catalog": "AI",
+            "name_cn": "AI开发平台",
+            "catalog_cn": "人工智能"
+          }
+        }
+      }
+    }
+  }
+}

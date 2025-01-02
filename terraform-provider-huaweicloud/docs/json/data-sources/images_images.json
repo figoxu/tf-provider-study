@@ -1,0 +1,127 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "data_source_schemas": {
+        "huaweicloud_images_images": {
+          "block": {
+            "attributes": {
+              "architecture": {
+                "type": "string",
+                "optional": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true
+              },
+              "flavor_id": {
+                "type": "string",
+                "optional": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "image_id": {
+                "type": "string",
+                "optional": true
+              },
+              "image_type": {
+                "type": "string",
+                "optional": true
+              },
+              "images": {
+                "type": [
+                  "list",
+                  [
+                    "object",
+                    {
+                      "active_at": "string",
+                      "architecture": "string",
+                      "backup_id": "string",
+                      "container_format": "string",
+                      "created_at": "string",
+                      "data_origin": "string",
+                      "description": "string",
+                      "disk_format": "string",
+                      "enterprise_project_id": "string",
+                      "file": "string",
+                      "id": "string",
+                      "image_type": "string",
+                      "max_ram_mb": "number",
+                      "min_disk_gb": "number",
+                      "min_ram_mb": "number",
+                      "name": "string",
+                      "os": "string",
+                      "os_version": "string",
+                      "owner": "string",
+                      "protected": "bool",
+                      "schema": "string",
+                      "size_bytes": "number",
+                      "status": "string",
+                      "updated_at": "string",
+                      "visibility": "string"
+                    }
+                  ]
+                ],
+                "computed": true
+              },
+              "is_whole_image": {
+                "type": "bool",
+                "optional": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true
+              },
+              "name_regex": {
+                "type": "string",
+                "optional": true
+              },
+              "os": {
+                "type": "string",
+                "optional": true
+              },
+              "os_version": {
+                "type": "string",
+                "computed": true
+              },
+              "owner": {
+                "type": "string",
+                "optional": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "sort_direction": {
+                "type": "string",
+                "optional": true,
+                "default": "asc"
+              },
+              "sort_key": {
+                "type": "string",
+                "optional": true,
+                "default": "name"
+              },
+              "tag": {
+                "type": "string",
+                "optional": true
+              },
+              "visibility": {
+                "type": "string",
+                "optional": true
+              }
+            }
+          },
+          "product": {
+            "short": "IMS",
+            "name": "Image Management Service",
+            "catalog": "Compute",
+            "name_cn": "镜像服务",
+            "catalog_cn": "计算"
+          }
+        }
+      }
+    }
+  }
+}

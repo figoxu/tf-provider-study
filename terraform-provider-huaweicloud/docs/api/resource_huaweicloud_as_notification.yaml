@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_as_notification
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AS
+paths:
+    /autoscaling-api/v1/{project_id}/scaling_notification/{scaling_group_id}:
+        GET:
+            tag: AS
+        PUT:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_notification/{scaling_group_id}/{topic_urn}:
+        DELETE:
+            tag: AS

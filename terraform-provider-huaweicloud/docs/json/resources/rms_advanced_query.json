@@ -1,0 +1,41 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_rms_advanced_query": {
+          "block": {
+            "attributes": {
+              "description": {
+                "type": "string",
+                "description": "Specifies the ResourceQL description.",
+                "optional": true
+              },
+              "expression": {
+                "type": "string",
+                "description": "Specifies the ResourceQL expression.",
+                "required": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "description": "Specifies the ResourceQL name.",
+                "required": true,
+                "forcenew": true
+              }
+            }
+          },
+          "product": {
+            "short": "Config",
+            "name": "Config",
+            "catalog": "Management & Governance",
+            "name_cn": "配置审计",
+            "catalog_cn": "管理与监管"
+          }
+        }
+      }
+    }
+  }
+}

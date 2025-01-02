@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_eg_custom_event_source
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: EG
+paths:
+    /v1/{project_id}/sources:
+        POST:
+            tag: EG
+    /v1/{project_id}/sources/{source_id}:
+        DELETE:
+            tag: EG
+        GET:
+            tag: EG
+        PUT:
+            tag: EG

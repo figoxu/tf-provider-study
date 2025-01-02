@@ -1,0 +1,19 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cnad_advanced_policy_associate
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AAD
+paths:
+    /v1/cnad/policies/{policy_id}/bind:
+        POST:
+            tag: AAD
+    /v1/cnad/policies/{policy_id}/unbind:
+        POST:
+            tag: AAD
+    /v1/cnad/protected-ips:
+        GET:
+            tag: AAD

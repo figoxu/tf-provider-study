@@ -1,0 +1,27 @@
+info:
+    version: ""
+    title: resource_huaweicloud_sms_task
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: SMS
+paths:
+    /v1/{project_id}/cloudservers/{server_id}:
+        GET:
+            tag: ECS
+    /v3/sources/{id}:
+        GET:
+            tag: SMS
+    /v3/tasks:
+        POST:
+            tag: SMS
+    /v3/tasks/{id}:
+        DELETE:
+            tag: SMS
+        GET:
+            tag: SMS
+    /v3/tasks/{id}/action:
+        POST:
+            tag: SMS

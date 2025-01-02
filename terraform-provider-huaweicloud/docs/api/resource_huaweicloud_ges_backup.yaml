@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ges_backup
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: GES
+paths:
+    /v2/{project_id}/graphs/{graph_id}/backups:
+        GET:
+            tag: GES
+        POST:
+            tag: GES
+    /v2/{project_id}/graphs/{graph_id}/backups/{id}:
+        DELETE:
+            tag: GES
+    /v2/{project_id}/graphs/{graph_id}/jobs/{job_id}/status:
+        GET:
+            tag: GES

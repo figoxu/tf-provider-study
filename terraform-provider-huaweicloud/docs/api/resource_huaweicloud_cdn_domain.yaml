@@ -1,0 +1,33 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cdn_domain
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CDN
+paths:
+    /v1.0/cdn/configuration/domains/{domain_name}:
+        GET:
+            tag: CDN
+    /v1.0/cdn/configuration/tags:
+        POST:
+            tag: CDN
+    /v1.0/cdn/configuration/tags/batch-delete:
+        POST:
+            tag: CDN
+    /v1.0/cdn/domains:
+        POST:
+            tag: CDN
+    /v1.0/cdn/domains/{domainId}:
+        DELETE:
+            tag: CDN
+    /v1.0/cdn/domains/{domainId}/disable:
+        PUT:
+            tag: CDN
+    /v1.1/cdn/configuration/domains/{domain_name}/configs:
+        GET:
+            tag: CDN
+        PUT:
+            tag: CDN

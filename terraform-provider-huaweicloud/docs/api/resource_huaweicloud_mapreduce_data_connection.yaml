@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_mapreduce_data_connection
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: MRS
+paths:
+    /v2/{project_id}/data-connectors:
+        GET:
+            tag: MRS
+        POST:
+            tag: MRS
+    /v2/{project_id}/data-connectors/{connector_id}:
+        DELETE:
+            tag: MRS
+        PUT:
+            tag: MRS

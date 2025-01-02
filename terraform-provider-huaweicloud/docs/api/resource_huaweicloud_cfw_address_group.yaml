@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cfw_address_group
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CFW
+paths:
+    /v1/{project_id}/address-set:
+        POST:
+            tag: CFW
+    /v1/{project_id}/address-sets/{id}:
+        DELETE:
+            tag: CFW
+        GET:
+            tag: CFW
+        PUT:
+            tag: CFW

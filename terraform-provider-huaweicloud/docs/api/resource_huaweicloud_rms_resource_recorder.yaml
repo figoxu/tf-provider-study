@@ -1,0 +1,17 @@
+info:
+    version: ""
+    title: resource_huaweicloud_rms_resource_recorder
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Config
+paths:
+    /v1/resource-manager/domains/{domain_id}/tracker-config:
+        DELETE:
+            tag: Config
+        GET:
+            tag: Config
+        PUT:
+            tag: Config

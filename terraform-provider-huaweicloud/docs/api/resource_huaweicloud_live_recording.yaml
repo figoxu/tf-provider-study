@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_live_recording
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Live
+paths:
+    /v1/{project_id}/record/rules:
+        POST:
+            tag: Live
+    /v1/{project_id}/record/rules/{id}:
+        DELETE:
+            tag: Live
+        GET:
+            tag: Live
+        PUT:
+            tag: Live

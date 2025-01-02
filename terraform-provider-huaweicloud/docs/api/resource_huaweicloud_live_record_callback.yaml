@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_live_record_callback
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Live
+paths:
+    /v1/{project_id}/record/callbacks:
+        GET:
+            tag: Live
+        POST:
+            tag: Live
+    /v1/{project_id}/record/callbacks/{id}:
+        DELETE:
+            tag: Live
+        GET:
+            tag: Live
+        PUT:
+            tag: Live

@@ -1,0 +1,26 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cc_connection
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CC
+paths:
+    /v3/{domain_id}/ccaas/cloud-connections:
+        POST:
+            tag: CC
+    /v3/{domain_id}/ccaas/cloud-connections/{id}:
+        DELETE:
+            tag: CC
+        GET:
+            tag: CC
+        PUT:
+            tag: CC
+    /v3/{domain_id}/ccaas/cloud-connections/{id}/tag:
+        POST:
+            tag: CC
+    /v3/{domain_id}/ccaas/cloud-connections/{id}/untag:
+        POST:
+            tag: CC

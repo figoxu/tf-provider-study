@@ -1,0 +1,38 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cbr_vault
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CBR
+paths:
+    /v3/{project_id}/policies:
+        GET:
+            tag: CBR
+    /v3/{project_id}/vault/{vault_id}/tags/action:
+        POST:
+            tag: CBR
+    /v3/{project_id}/vaults:
+        POST:
+            tag: CBR
+    /v3/{project_id}/vaults/{vault_id}:
+        DELETE:
+            tag: CBR
+        GET:
+            tag: CBR
+        PUT:
+            tag: CBR
+    /v3/{project_id}/vaults/{vault_id}/addresources:
+        POST:
+            tag: CBR
+    /v3/{project_id}/vaults/{vault_id}/associatepolicy:
+        POST:
+            tag: CBR
+    /v3/{project_id}/vaults/{vault_id}/dissociatepolicy:
+        POST:
+            tag: CBR
+    /v3/{project_id}/vaults/{vault_id}/removeresources:
+        POST:
+            tag: CBR

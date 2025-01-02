@@ -1,0 +1,24 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lts_stream
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: LTS
+paths:
+    /v1/{project_id}/{resource_type}/{resource_id}/tags/action:
+        POST:
+            tag: LTS
+    /v2/{project_id}/groups/{log_group_id}/streams:
+        GET:
+            tag: LTS
+        POST:
+            tag: LTS
+    /v2/{project_id}/groups/{log_group_id}/streams-ttl/{log_stream_id}:
+        PUT:
+            tag: LTS
+    /v2/{project_id}/groups/{log_group_id}/streams/{log_stream_id}:
+        DELETE:
+            tag: LTS

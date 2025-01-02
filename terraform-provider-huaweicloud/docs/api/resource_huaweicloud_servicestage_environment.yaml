@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_servicestage_environment
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ServiceStage
+paths:
+    /v2/{project_id}/cas/environments:
+        POST:
+            tag: ServiceStage
+    /v2/{project_id}/cas/environments/{environment_id}:
+        DELETE:
+            tag: ServiceStage
+        GET:
+            tag: ServiceStage
+        PUT:
+            tag: ServiceStage
+    /v2/{project_id}/cas/environments/{environment_id}/resources:
+        PATCH:
+            tag: ServiceStage

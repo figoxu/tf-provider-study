@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_waf_reference_table
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/valuelist:
+        POST:
+            tag: WAF
+    /v1/{project_id}/waf/valuelist/{valuelistid}:
+        DELETE:
+            tag: WAF
+        GET:
+            tag: WAF
+        PUT:
+            tag: WAF

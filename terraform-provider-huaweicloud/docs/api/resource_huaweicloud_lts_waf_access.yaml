@@ -1,0 +1,16 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lts_waf_access
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: WAF
+paths:
+    /v1/{project_id}/waf/config/lts:
+        GET:
+            tag: WAF
+    /v1/{project_id}/waf/config/lts/{ltsconfig_id}:
+        PUT:
+            tag: WAF

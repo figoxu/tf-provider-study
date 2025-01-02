@@ -1,0 +1,26 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ga_accelerator
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: GA
+paths:
+    /v1/{resource_type}/{resource_id}/tags/create:
+        POST:
+            tag: GA
+    /v1/{resource_type}/{resource_id}/tags/delete:
+        DELETE:
+            tag: GA
+    /v1/accelerators:
+        POST:
+            tag: GA
+    /v1/accelerators/{accelerator_id}:
+        DELETE:
+            tag: GA
+        GET:
+            tag: GA
+        PUT:
+            tag: GA

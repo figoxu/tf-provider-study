@@ -1,0 +1,27 @@
+info:
+    version: ""
+    title: resource_huaweicloud_compute_interface_attach
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ECS
+paths:
+    /v1/{project_id}/cloudservers/{server_id}/nics:
+        POST:
+            tag: ECS
+    /v1/{project_id}/cloudservers/{server_id}/nics/delete:
+        POST:
+            tag: ECS
+    /v1/{project_id}/cloudservers/{server_id}/os-interface:
+        GET:
+            tag: ECS
+    /v1/{project_id}/jobs/{job_id}:
+        GET:
+            tag: ECS
+    /v1/{project_id}/ports/{port_id}:
+        GET:
+            tag: VPC
+        PUT:
+            tag: VPC

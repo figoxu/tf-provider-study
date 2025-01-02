@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_sdrs_protected_instance
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: SDRS
+paths:
+    /v1/{project_id}/protected-instances:
+        POST:
+            tag: SDRS
+    /v1/{project_id}/protected-instances/{id}:
+        DELETE:
+            tag: SDRS
+        GET:
+            tag: SDRS
+        PUT:
+            tag: SDRS
+    /v1/{project_id}/protected-instances/{id}/tags/action:
+        POST:
+            tag: SDRS

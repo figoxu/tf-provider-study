@@ -1,0 +1,44 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ces_alarmrule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CES
+paths:
+    /V1.0/{project_id}/alarms/{id}:
+        GET:
+            tag: CES
+        PUT:
+            tag: CES
+    /v1.0/enterprise-projects/{enterprise_project_id}/resources-migrate:
+        POST:
+            tag: EPS
+    /v2/{project_id}/alarms:
+        GET:
+            tag: CES
+        POST:
+            tag: CES
+    /v2/{project_id}/alarms/{id}/policies:
+        PUT:
+            tag: CES
+    /v2/{project_id}/alarms/{id}/resources:
+        GET:
+            tag: CES
+    /v2/{project_id}/alarms/{id}/resources/{operation}:
+        POST:
+            tag: CES
+    /v2/{project_id}/alarms/{id}/resources/batch-create:
+        POST:
+            tag: CES
+    /v2/{project_id}/alarms/{id}/resources/batch-delete:
+        POST:
+            tag: CES
+    /v2/{project_id}/alarms/action:
+        POST:
+            tag: CES
+    /v2/{project_id}/alarms/batch-delete:
+        POST:
+            tag: CES

@@ -1,0 +1,49 @@
+info:
+    version: ""
+    title: resource_huaweicloud_kms_key
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DEW
+paths:
+    /v1.0/{project_id}/kms/{key_id}/tags:
+        GET:
+            tag: DEW
+    /v1.0/{project_id}/kms/{key_id}/tags/action:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/create-key:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/describe-key:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/disable-key:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/disable-key-rotation:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/enable-key:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/enable-key-rotation:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/get-key-rotation-status:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/schedule-key-deletion:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/update-key-alias:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/update-key-description:
+        POST:
+            tag: DEW
+    /v1.0/{project_id}/kms/update-key-rotation-interval:
+        POST:
+            tag: DEW

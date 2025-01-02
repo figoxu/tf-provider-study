@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dcs_backup
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DCS
+paths:
+    /v2/{project_id}/instances/{instance_id}/backups:
+        GET:
+            tag: DCS
+        POST:
+            tag: DCS
+    /v2/{project_id}/instances/{instance_id}/backups/{backup_id}:
+        DELETE:
+            tag: DCS

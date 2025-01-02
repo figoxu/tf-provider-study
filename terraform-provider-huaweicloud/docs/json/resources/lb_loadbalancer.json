@@ -1,0 +1,111 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_lb_loadbalancer": {
+          "block": {
+            "attributes": {
+              "auto_renew": {
+                "type": "string",
+                "optional": true
+              },
+              "charge_mode": {
+                "type": "string",
+                "computed": true
+              },
+              "charging_mode": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "created_at": {
+                "type": "string",
+                "computed": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "enterprise_project_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "frozen_scene": {
+                "type": "string",
+                "computed": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true
+              },
+              "period": {
+                "type": "number",
+                "optional": true
+              },
+              "period_unit": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_reason": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_status": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "public_ip": {
+                "type": "string",
+                "computed": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "tags": {
+                "type": [
+                  "map",
+                  "string"
+                ],
+                "optional": true
+              },
+              "updated_at": {
+                "type": "string",
+                "computed": true
+              },
+              "vip_address": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "vip_port_id": {
+                "type": "string",
+                "computed": true
+              },
+              "vip_subnet_id": {
+                "type": "string",
+                "description": "the IPv4 subnet ID of the subnet where the load balancer works",
+                "required": true,
+                "forcenew": true
+              }
+            }
+          },
+          "product": {
+            "short": "ELB",
+            "name": "Elastic Load Balance",
+            "catalog": "Networking",
+            "name_cn": "弹性负载均衡",
+            "catalog_cn": "网络"
+          }
+        }
+      }
+    }
+  }
+}

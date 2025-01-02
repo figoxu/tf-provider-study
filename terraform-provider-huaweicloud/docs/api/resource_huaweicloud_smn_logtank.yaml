@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_smn_logtank
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: SMN
+paths:
+    /v2/{project_id}/notifications/topics/{topicUrn}/logtanks:
+        GET:
+            tag: SMN
+        POST:
+            tag: SMN
+    /v2/{project_id}/notifications/topics/{topicUrn}/logtanks/{logTankID}:
+        DELETE:
+            tag: SMN
+        PUT:
+            tag: SMN

@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_iec_vpc_subnet
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: IEC
+paths:
+    /v1/subnets:
+        POST:
+            tag: IEC
+    /v1/subnets/{subnet_id}:
+        DELETE:
+            tag: IEC
+        GET:
+            tag: IEC
+        PUT:
+            tag: IEC

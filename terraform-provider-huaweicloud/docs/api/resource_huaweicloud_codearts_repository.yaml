@@ -1,0 +1,22 @@
+info:
+    version: ""
+    title: resource_huaweicloud_codearts_repository
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CodeArts
+paths:
+    /v1/repositories:
+        POST:
+            tag: CodeArts
+    /v1/repositories/{repository_uuid}:
+        DELETE:
+            tag: CodeArts
+    /v1/repositories/{repository_uuid}/status:
+        GET:
+            tag: CodeArts
+    /v2/repositories/{repository_uuid}:
+        GET:
+            tag: CodeArts

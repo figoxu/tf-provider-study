@@ -1,0 +1,153 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_elb_pool": {
+          "block": {
+            "attributes": {
+              "any_port_enable": {
+                "type": "bool",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "connection_drain_enabled": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "connection_drain_timeout": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "created_at": {
+                "type": "string",
+                "computed": true
+              },
+              "deletion_protection_enable": {
+                "type": "bool",
+                "optional": true
+              },
+              "description": {
+                "type": "string",
+                "optional": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "ip_version": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "lb_method": {
+                "type": "string",
+                "required": true
+              },
+              "listener_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "loadbalancer_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true,
+                "forcenew": true
+              },
+              "minimum_healthy_member_count": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "monitor_id": {
+                "type": "string",
+                "computed": true
+              },
+              "name": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_reason": {
+                "type": "string",
+                "optional": true
+              },
+              "protection_status": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "protocol": {
+                "type": "string",
+                "required": true,
+                "forcenew": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "slow_start_duration": {
+                "type": "number",
+                "optional": true,
+                "computed": true
+              },
+              "slow_start_enabled": {
+                "type": "bool",
+                "optional": true,
+                "computed": true
+              },
+              "type": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              },
+              "updated_at": {
+                "type": "string",
+                "computed": true
+              },
+              "vpc_id": {
+                "type": "string",
+                "optional": true,
+                "computed": true
+              }
+            },
+            "block_types": {
+              "persistence": {
+                "block": {
+                  "attributes": {
+                    "cookie_name": {
+                      "type": "string",
+                      "optional": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
+                },
+                "nesting_mode": "list",
+                "max_items": 1
+              }
+            }
+          },
+          "product": {
+            "short": "ELB",
+            "name": "Elastic Load Balance",
+            "catalog": "Networking",
+            "name_cn": "弹性负载均衡",
+            "catalog_cn": "网络"
+          }
+        }
+      }
+    }
+  }
+}

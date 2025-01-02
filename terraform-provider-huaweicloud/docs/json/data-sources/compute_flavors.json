@@ -1,0 +1,77 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "data_source_schemas": {
+        "huaweicloud_compute_flavors": {
+          "block": {
+            "attributes": {
+              "availability_zone": {
+                "type": "string",
+                "optional": true
+              },
+              "cpu_core_count": {
+                "type": "number",
+                "optional": true
+              },
+              "flavors": {
+                "type": [
+                  "list",
+                  [
+                    "object",
+                    {
+                      "cpu_core_count": "number",
+                      "generation": "string",
+                      "id": "string",
+                      "memory_size": "number",
+                      "performance_type": "string",
+                      "storage_type": "string"
+                    }
+                  ]
+                ],
+                "computed": true
+              },
+              "generation": {
+                "type": "string",
+                "optional": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "ids": {
+                "type": [
+                  "list",
+                  "string"
+                ],
+                "computed": true
+              },
+              "memory_size": {
+                "type": "number",
+                "optional": true
+              },
+              "performance_type": {
+                "type": "string",
+                "optional": true
+              },
+              "region": {
+                "type": "string",
+                "computed": true
+              },
+              "storage_type": {
+                "type": "string",
+                "optional": true
+              }
+            }
+          },
+          "product": {
+            "short": "ECS",
+            "name": "Elastic Cloud Server",
+            "catalog": "Compute",
+            "name_cn": "弹性云服务器",
+            "catalog_cn": "计算"
+          }
+        }
+      }
+    }
+  }
+}

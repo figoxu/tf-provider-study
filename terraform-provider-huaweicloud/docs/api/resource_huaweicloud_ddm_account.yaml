@@ -1,0 +1,26 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ddm_account
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DDM
+paths:
+    /v1/{project_id}/instances/{instance_id}:
+        GET:
+            tag: DDM
+    /v1/{project_id}/instances/{instance_id}/users:
+        GET:
+            tag: DDM
+        POST:
+            tag: DDM
+    /v1/{project_id}/instances/{instance_id}/users/{username}:
+        DELETE:
+            tag: DDM
+        PUT:
+            tag: DDM
+    /v2/{project_id}/instances/{instance_id}/users/{username}/password:
+        POST:
+            tag: DDM

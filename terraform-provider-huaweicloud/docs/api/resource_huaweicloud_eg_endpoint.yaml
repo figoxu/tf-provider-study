@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_eg_endpoint
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: EG
+paths:
+    /v1/{project_id}/endpoints:
+        GET:
+            tag: EG
+        POST:
+            tag: EG
+    /v1/{project_id}/endpoints/{endpoint_id}:
+        DELETE:
+            tag: EG
+        PUT:
+            tag: EG

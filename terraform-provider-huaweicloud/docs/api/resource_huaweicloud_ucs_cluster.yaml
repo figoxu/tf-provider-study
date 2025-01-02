@@ -1,0 +1,26 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ucs_cluster
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: UCS
+paths:
+    /v1/clusters:
+        POST:
+            tag: UCS
+    /v1/clusters/{id}:
+        DELETE:
+            tag: UCS
+        GET:
+            tag: UCS
+        PUT:
+            tag: UCS
+    /v1/clusters/{id}/join:
+        POST:
+            tag: UCS
+    /v1/clusters/{id}/unjoin:
+        POST:
+            tag: UCS

@@ -1,0 +1,18 @@
+info:
+    version: ""
+    title: resource_huaweicloud_ddm_schema
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DDM
+paths:
+    /v1/{project_id}/instances/{instance_id}/databases:
+        POST:
+            tag: DDM
+    /v1/{project_id}/instances/{instance_id}/databases/{ddm_dbname}:
+        DELETE:
+            tag: DDM
+        GET:
+            tag: DDM

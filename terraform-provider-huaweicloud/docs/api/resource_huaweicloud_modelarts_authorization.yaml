@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_modelarts_authorization
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ModelArts
+paths:
+    /v2/{project_id}/agency:
+        POST:
+            tag: ModelArts
+    /v2/{project_id}/authorizations:
+        DELETE:
+            tag: ModelArts
+        GET:
+            tag: ModelArts
+        POST:
+            tag: ModelArts

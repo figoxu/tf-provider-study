@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dsc_asset_obs
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DSC
+paths:
+    /v1/{project_id}/sdg/asset/{id}/name:
+        PUT:
+            tag: DSC
+    /v1/{project_id}/sdg/asset/obs/bucket/{id}:
+        DELETE:
+            tag: DSC
+    /v1/{project_id}/sdg/asset/obs/buckets:
+        GET:
+            tag: DSC
+        POST:
+            tag: DSC

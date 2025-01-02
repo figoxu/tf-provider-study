@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_aom_cmdb_application
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AOM
+paths:
+    /v1/applications:
+        POST:
+            tag: AOM
+    /v1/applications/{application_id}:
+        DELETE:
+            tag: AOM
+        GET:
+            tag: AOM
+        PUT:
+            tag: AOM

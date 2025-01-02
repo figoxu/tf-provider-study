@@ -1,0 +1,50 @@
+info:
+    version: ""
+    title: resource_huaweicloud_identity_agency
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: IAM
+paths:
+    /v3.0/OS-AGENCY/agencies:
+        POST:
+            tag: IAM
+    /v3.0/OS-AGENCY/agencies/{agency_id}:
+        DELETE:
+            tag: IAM
+        GET:
+            tag: IAM
+        PUT:
+            tag: IAM
+    /v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles:
+        GET:
+            tag: IAM
+    /v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}:
+        DELETE:
+            tag: IAM
+        PUT:
+            tag: IAM
+    /v3.0/OS-AGENCY/projects/{projectID}/agencies/{agency_id}/roles:
+        GET:
+            tag: IAM
+    /v3.0/OS-AGENCY/projects/{projectID}/agencies/{agency_id}/roles/{role_id}:
+        DELETE:
+            tag: IAM
+        PUT:
+            tag: IAM
+    /v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects:
+        DELETE:
+            tag: IAM
+        PUT:
+            tag: IAM
+    /v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/inherited_to_projects:
+        GET:
+            tag: IAM
+    /v3/projects:
+        GET:
+            tag: IAM
+    /v3/roles:
+        GET:
+            tag: IAM

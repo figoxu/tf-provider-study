@@ -1,0 +1,21 @@
+info:
+    version: ""
+    title: resource_huaweicloud_cfw_black_white_list
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: CFW
+paths:
+    /v1/{project_id}/black-white-list:
+        POST:
+            tag: CFW
+    /v1/{project_id}/black-white-list/{id}:
+        DELETE:
+            tag: CFW
+        PUT:
+            tag: CFW
+    /v1/{project_id}/black-white-lists:
+        GET:
+            tag: CFW

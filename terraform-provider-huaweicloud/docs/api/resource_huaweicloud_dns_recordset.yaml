@@ -1,0 +1,33 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dns_recordset
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DNS
+paths:
+    /v2.1/recordsets/{recordset_id}/statuses/set:
+        PUT:
+            tag: DNS
+    /v2.1/zones/{zone_id}/recordsets:
+        POST:
+            tag: DNS
+    /v2.1/zones/{zone_id}/recordsets/{recordset_id}:
+        DELETE:
+            tag: DNS
+        GET:
+            tag: DNS
+        PUT:
+            tag: DNS
+    /v2/zones/{zone_id}/recordsets:
+        POST:
+            tag: DNS
+    /v2/zones/{zone_id}/recordsets/{recordset_id}:
+        DELETE:
+            tag: DNS
+        GET:
+            tag: DNS
+        PUT:
+            tag: DNS

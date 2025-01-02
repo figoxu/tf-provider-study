@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_elb_logtank
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ELB
+paths:
+    /v2/{project_id}/groups/{log_group_id}/streams:
+        GET:
+            tag: LTS
+    /v3/{project_id}/elb/logtanks:
+        POST:
+            tag: ELB
+    /v3/{project_id}/elb/logtanks/{logtank_id}:
+        DELETE:
+            tag: ELB
+        GET:
+            tag: ELB
+        PUT:
+            tag: ELB

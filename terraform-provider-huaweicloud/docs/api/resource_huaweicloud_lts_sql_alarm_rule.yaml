@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_lts_sql_alarm_rule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: LTS
+paths:
+    /v2/{project_id}/lts/alarms/sql-alarm-rule:
+        GET:
+            tag: LTS
+        POST:
+            tag: LTS
+        PUT:
+            tag: LTS
+    /v2/{project_id}/lts/alarms/sql-alarm-rule/{sql_alarm_rule_id}:
+        DELETE:
+            tag: LTS
+    /v2/{project_id}/lts/alarms/status:
+        PUT:
+            tag: LTS

@@ -1,0 +1,35 @@
+info:
+    version: ""
+    title: resource_huaweicloud_as_group
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AS
+paths:
+    /autoscaling-api/v1/{project_id}/scaling_group:
+        POST:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group/{id}:
+        DELETE:
+            tag: AS
+        GET:
+            tag: AS
+        PUT:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group/{id}/action:
+        POST:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group_instance/{groupID}/action:
+        POST:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group_instance/{groupID}/list:
+        GET:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group_tag/{id}/tags:
+        GET:
+            tag: AS
+    /autoscaling-api/v1/{project_id}/scaling_group_tag/{id}/tags/action:
+        POST:
+            tag: AS

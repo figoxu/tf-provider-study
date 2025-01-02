@@ -1,0 +1,30 @@
+info:
+    version: ""
+    title: resource_huaweicloud_oms_migration_task_group
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: OMS
+paths:
+    /v2/{project_id}/taskgroups:
+        POST:
+            tag: OMS
+    /v2/{project_id}/taskgroups/{group_id}:
+        DELETE:
+            tag: OMS
+        GET:
+            tag: OMS
+    /v2/{project_id}/taskgroups/{group_id}/retry:
+        PUT:
+            tag: OMS
+    /v2/{project_id}/taskgroups/{group_id}/start:
+        PUT:
+            tag: OMS
+    /v2/{project_id}/taskgroups/{group_id}/stop:
+        PUT:
+            tag: OMS
+    /v2/{project_id}/taskgroups/{group_id}/update:
+        PUT:
+            tag: OMS

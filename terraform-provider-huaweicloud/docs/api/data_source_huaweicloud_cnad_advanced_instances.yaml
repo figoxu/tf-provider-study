@@ -1,0 +1,13 @@
+info:
+    version: ""
+    title: data_source_huaweicloud_cnad_advanced_instances
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AAD
+paths:
+    /v1/cnad/packages:
+        GET:
+            tag: AAD

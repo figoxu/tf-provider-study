@@ -1,0 +1,29 @@
+info:
+    version: ""
+    title: resource_huaweicloud_organizations_organizational_unit
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Organizations
+paths:
+    /v1/organizations/{resource_type}/{resource_id}/tags:
+        GET:
+            tag: Organizations
+    /v1/organizations/{resource_type}/{resource_id}/tags/create:
+        POST:
+            tag: Organizations
+    /v1/organizations/{resource_type}/{resource_id}/tags/delete:
+        POST:
+            tag: Organizations
+    /v1/organizations/organizational-units:
+        POST:
+            tag: Organizations
+    /v1/organizations/organizational-units/{organizational_unit_id}:
+        DELETE:
+            tag: Organizations
+        GET:
+            tag: Organizations
+        PATCH:
+            tag: Organizations

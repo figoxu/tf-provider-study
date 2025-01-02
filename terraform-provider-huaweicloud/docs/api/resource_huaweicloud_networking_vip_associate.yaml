@@ -1,0 +1,15 @@
+info:
+    version: ""
+    title: resource_huaweicloud_networking_vip_associate
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: VPC
+paths:
+    /v2.0/ports/{id}:
+        GET:
+            tag: VPC
+        PUT:
+            tag: VPC

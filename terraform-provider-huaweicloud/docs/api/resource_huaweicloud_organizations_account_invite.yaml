@@ -1,0 +1,25 @@
+info:
+    version: ""
+    title: resource_huaweicloud_organizations_account_invite
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Organizations
+paths:
+    /v1/organizations/accounts/{account_id}:
+        GET:
+            tag: Organizations
+    /v1/organizations/accounts/{account_id}/remove:
+        POST:
+            tag: Organizations
+    /v1/organizations/accounts/invite:
+        POST:
+            tag: Organizations
+    /v1/organizations/handshakes/{handshake_id}:
+        GET:
+            tag: Organizations
+    /v1/organizations/handshakes/{handshake_id}/cancel:
+        POST:
+            tag: Organizations

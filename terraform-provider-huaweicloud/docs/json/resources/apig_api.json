@@ -1,0 +1,873 @@
+{
+  "provider_schemas": {
+    "huaweicloud/huaweicloud": {
+      "resource_schemas": {
+        "huaweicloud_apig_api": {
+          "block": {
+            "attributes": {
+              "authorizer_id": {
+                "type": "string",
+                "description": "The ID of the authorizer to which the API request used.",
+                "optional": true
+              },
+              "body_description": {
+                "type": "string",
+                "description": "The description of the API request body, which can be an example request body, media type or parameters.",
+                "optional": true
+              },
+              "content_type": {
+                "type": "string",
+                "description": "The content type of the request body.",
+                "optional": true,
+                "computed": true
+              },
+              "cors": {
+                "type": "bool",
+                "description": "Whether CORS is supported.",
+                "optional": true,
+                "default": false
+              },
+              "description": {
+                "type": "string",
+                "description": "The API description.",
+                "optional": true
+              },
+              "failure_response": {
+                "type": "string",
+                "description": "The example response for a failure request.",
+                "optional": true
+              },
+              "group_id": {
+                "type": "string",
+                "description": "The ID of the API group to which the API belongs.",
+                "required": true
+              },
+              "id": {
+                "type": "string",
+                "computed": true
+              },
+              "instance_id": {
+                "type": "string",
+                "description": "The ID of the instance to which the API belongs.",
+                "required": true,
+                "forcenew": true
+              },
+              "is_send_fg_body_base64": {
+                "type": "bool",
+                "description": "Whether to perform Base64 encoding on the body for interaction with FunctionGraph.",
+                "optional": true,
+                "default": true
+              },
+              "matching": {
+                "type": "string",
+                "description": "The matching mode of the API.",
+                "optional": true,
+                "default": "Exact"
+              },
+              "name": {
+                "type": "string",
+                "description": "The API name.",
+                "required": true
+              },
+              "region": {
+                "type": "string",
+                "description": "The region where the API is located.",
+                "computed": true
+              },
+              "registered_at": {
+                "type": "string",
+                "description": "The registered time of the API.",
+                "computed": true
+              },
+              "request_method": {
+                "type": "string",
+                "description": "The request method of the API.",
+                "required": true
+              },
+              "request_path": {
+                "type": "string",
+                "description": "The request address.",
+                "required": true
+              },
+              "request_protocol": {
+                "type": "string",
+                "description": "The request protocol of the API request.",
+                "required": true
+              },
+              "response_id": {
+                "type": "string",
+                "description": "The ID of the custom response that API used.",
+                "optional": true
+              },
+              "security_authentication": {
+                "type": "string",
+                "description": "The security authentication mode of the API request.",
+                "optional": true,
+                "default": "NONE"
+              },
+              "simple_authentication": {
+                "type": "bool",
+                "description": "Whether the authentication of the application code is enabled.",
+                "optional": true,
+                "computed": true
+              },
+              "success_response": {
+                "type": "string",
+                "description": "The example response for a successful request.",
+                "optional": true
+              },
+              "tags": {
+                "type": [
+                  "set",
+                  "string"
+                ],
+                "description": "The list of tags configuration.",
+                "optional": true
+              },
+              "type": {
+                "type": "string",
+                "description": "The API type.",
+                "required": true
+              },
+              "updated_at": {
+                "type": "string",
+                "description": "The latest update time of the API.",
+                "computed": true
+              }
+            },
+            "block_types": {
+              "backend_params": {
+                "block": {
+                  "attributes": {
+                    "description": {
+                      "type": "string",
+                      "description": "The description of the parameter.",
+                      "optional": true
+                    },
+                    "location": {
+                      "type": "string",
+                      "description": "Where the parameter is located.",
+                      "required": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The parameter name.",
+                      "required": true
+                    },
+                    "system_param_type": {
+                      "type": "string",
+                      "optional": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "The parameter type.",
+                      "required": true
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "The value of the parameter",
+                      "required": true
+                    }
+                  },
+                  "description": "The configurations of the backend parameters."
+                },
+                "nesting_mode": "set",
+                "max_items": 50
+              },
+              "func_graph": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "function_alias_urn": {
+                      "type": "string",
+                      "description": "The alias URN of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "function_urn": {
+                      "type": "string",
+                      "description": "The URN of the FunctionGraph function.",
+                      "required": true
+                    },
+                    "invocation_type": {
+                      "type": "string",
+                      "description": "The invocation type.",
+                      "optional": true,
+                      "default": "sync"
+                    },
+                    "network_type": {
+                      "type": "string",
+                      "description": "The network architecture (framework) type of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "request_protocol": {
+                      "type": "string",
+                      "description": "The request protocol of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "description": "The timeout for API requests to backend service.",
+                      "optional": true,
+                      "default": 5000
+                    },
+                    "version": {
+                      "type": "string",
+                      "description": "The version of the FunctionGraph function.",
+                      "optional": true
+                    }
+                  },
+                  "description": "The FunctionGraph backend details."
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "max_items": 1
+              },
+              "func_graph_policy": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "effective_mode": {
+                      "type": "string",
+                      "description": "The effective mode of the backend policy.",
+                      "optional": true,
+                      "default": "ANY"
+                    },
+                    "function_alias_urn": {
+                      "type": "string",
+                      "description": "The alias URN of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "function_urn": {
+                      "type": "string",
+                      "description": "The URN of the FunctionGraph function.",
+                      "required": true
+                    },
+                    "invocation_type": {
+                      "type": "string",
+                      "description": "The invocation mode of the FunctionGraph function.",
+                      "optional": true,
+                      "default": "sync"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the backend policy.",
+                      "required": true
+                    },
+                    "network_type": {
+                      "type": "string",
+                      "description": "The network (framework) type of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "request_protocol": {
+                      "type": "string",
+                      "description": "The request protocol of the FunctionGraph function.",
+                      "optional": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "description": "The timeout for API requests to backend service.",
+                      "optional": true,
+                      "default": 5000
+                    },
+                    "version": {
+                      "type": "string",
+                      "description": "The version of the FunctionGraph function.",
+                      "optional": true
+                    }
+                  },
+                  "block_types": {
+                    "backend_params": {
+                      "block": {
+                        "attributes": {
+                          "description": {
+                            "type": "string",
+                            "description": "The description of the parameter.",
+                            "optional": true
+                          },
+                          "location": {
+                            "type": "string",
+                            "description": "Where the parameter is located.",
+                            "required": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The parameter name.",
+                            "required": true
+                          },
+                          "system_param_type": {
+                            "type": "string",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The parameter type.",
+                            "required": true
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the parameter",
+                            "required": true
+                          }
+                        },
+                        "description": "The configaiton list of the backend parameters."
+                      },
+                      "nesting_mode": "set"
+                    },
+                    "conditions": {
+                      "block": {
+                        "attributes": {
+                          "cookie_name": {
+                            "type": "string",
+                            "description": "The cookie parameter name.",
+                            "optional": true
+                          },
+                          "frontend_authorizer_name": {
+                            "type": "string",
+                            "description": "The frontend authentication parameter name.",
+                            "optional": true
+                          },
+                          "mapped_param_location": {
+                            "type": "string",
+                            "description": "The location of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "mapped_param_name": {
+                            "type": "string",
+                            "description": "The name of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "param_name": {
+                            "type": "string",
+                            "description": "The request parameter name.",
+                            "optional": true
+                          },
+                          "source": {
+                            "type": "string",
+                            "description": "The type of the backend policy.",
+                            "optional": true,
+                            "default": "param"
+                          },
+                          "sys_name": {
+                            "type": "string",
+                            "description": "The gateway built-in parameter name.",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The condition type.",
+                            "optional": true,
+                            "default": "Equal"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the backend policy.",
+                            "required": true
+                          }
+                        },
+                        "description": "The policy conditions."
+                      },
+                      "nesting_mode": "set",
+                      "min_items": 1,
+                      "max_items": 5
+                    }
+                  },
+                  "description": "The policy backends of the FunctionGraph function."
+                },
+                "nesting_mode": "set",
+                "max_items": 5
+              },
+              "mock": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "response": {
+                      "type": "string",
+                      "description": "The response content of the mock.",
+                      "required": true
+                    },
+                    "status_code": {
+                      "type": "number",
+                      "description": "The custom status code of the mock response.",
+                      "optional": true,
+                      "computed": true
+                    }
+                  },
+                  "description": "The mock backend details."
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "max_items": 1
+              },
+              "mock_policy": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "effective_mode": {
+                      "type": "string",
+                      "description": "The effective mode of the backend policy.",
+                      "optional": true,
+                      "default": "ANY"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The backend policy name.",
+                      "required": true
+                    },
+                    "response": {
+                      "type": "string",
+                      "description": "The response content of the mock.",
+                      "optional": true
+                    },
+                    "status_code": {
+                      "type": "number",
+                      "description": "The custom status code of the mock response.",
+                      "optional": true,
+                      "computed": true
+                    }
+                  },
+                  "block_types": {
+                    "backend_params": {
+                      "block": {
+                        "attributes": {
+                          "description": {
+                            "type": "string",
+                            "description": "The description of the parameter.",
+                            "optional": true
+                          },
+                          "location": {
+                            "type": "string",
+                            "description": "Where the parameter is located.",
+                            "required": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The parameter name.",
+                            "required": true
+                          },
+                          "system_param_type": {
+                            "type": "string",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The parameter type.",
+                            "required": true
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the parameter",
+                            "required": true
+                          }
+                        },
+                        "description": "The configuration list of backend parameters."
+                      },
+                      "nesting_mode": "set"
+                    },
+                    "conditions": {
+                      "block": {
+                        "attributes": {
+                          "cookie_name": {
+                            "type": "string",
+                            "description": "The cookie parameter name.",
+                            "optional": true
+                          },
+                          "frontend_authorizer_name": {
+                            "type": "string",
+                            "description": "The frontend authentication parameter name.",
+                            "optional": true
+                          },
+                          "mapped_param_location": {
+                            "type": "string",
+                            "description": "The location of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "mapped_param_name": {
+                            "type": "string",
+                            "description": "The name of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "param_name": {
+                            "type": "string",
+                            "description": "The request parameter name.",
+                            "optional": true
+                          },
+                          "source": {
+                            "type": "string",
+                            "description": "The type of the backend policy.",
+                            "optional": true,
+                            "default": "param"
+                          },
+                          "sys_name": {
+                            "type": "string",
+                            "description": "The gateway built-in parameter name.",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The condition type.",
+                            "optional": true,
+                            "default": "Equal"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the backend policy.",
+                            "required": true
+                          }
+                        },
+                        "description": "The policy conditions."
+                      },
+                      "nesting_mode": "set",
+                      "min_items": 1,
+                      "max_items": 5
+                    }
+                  },
+                  "description": "The mock policy backends."
+                },
+                "nesting_mode": "set",
+                "max_items": 5
+              },
+              "request_params": {
+                "block": {
+                  "attributes": {
+                    "default": {
+                      "type": "string",
+                      "description": "The default value of the parameter.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "The parameter description.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "enumeration": {
+                      "type": "string",
+                      "description": "The enumerated value.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "example": {
+                      "type": "string",
+                      "description": "The parameter example.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "location": {
+                      "type": "string",
+                      "description": "Where this parameter is located.",
+                      "optional": true,
+                      "default": "PATH"
+                    },
+                    "maximum": {
+                      "type": "number",
+                      "description": "The maximum value or length (string parameter) for parameter.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "minimum": {
+                      "type": "number",
+                      "description": "The minimum value or length (string parameter) for parameter.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the request parameter.",
+                      "required": true
+                    },
+                    "orchestrations": {
+                      "type": [
+                        "list",
+                        "string"
+                      ],
+                      "description": "The list of orchestration rules that parameter used.",
+                      "optional": true
+                    },
+                    "passthrough": {
+                      "type": "bool",
+                      "description": "Whether to transparently transfer the parameter.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "required": {
+                      "type": "bool",
+                      "description": "Whether this parameter is required.",
+                      "optional": true,
+                      "computed": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "The parameter type.",
+                      "optional": true,
+                      "default": "STRING"
+                    },
+                    "valid_enable": {
+                      "type": "number",
+                      "description": "Whether to enable the parameter validation.",
+                      "optional": true,
+                      "computed": true
+                    }
+                  },
+                  "description": "The configurations of the front-end parameters."
+                },
+                "nesting_mode": "set",
+                "max_items": 50
+              },
+              "web": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "backend_address": {
+                      "type": "string",
+                      "description": "The backend service address, which consists of a domain name or IP address, and a port number.",
+                      "optional": true
+                    },
+                    "host_header": {
+                      "type": "string",
+                      "description": "The proxy host header.",
+                      "optional": true
+                    },
+                    "path": {
+                      "type": "string",
+                      "description": "The backend request path.",
+                      "required": true
+                    },
+                    "request_method": {
+                      "type": "string",
+                      "description": "The backend request method of the API.",
+                      "optional": true
+                    },
+                    "request_protocol": {
+                      "type": "string",
+                      "description": "The web protocol type of the API request.",
+                      "optional": true,
+                      "default": "HTTPS"
+                    },
+                    "retry_count": {
+                      "type": "number",
+                      "description": "The number of retry attempts to request the backend service.",
+                      "optional": true,
+                      "default": -1
+                    },
+                    "ssl_enable": {
+                      "type": "bool",
+                      "description": "Whether to enable two-way authentication.",
+                      "optional": true,
+                      "default": false
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "description": "The timeout for API requests to backend service.",
+                      "optional": true,
+                      "default": 5000
+                    },
+                    "vpc_channel_id": {
+                      "type": "string",
+                      "description": "The VPC channel ID.",
+                      "optional": true
+                    }
+                  },
+                  "description": "The web backend details."
+                },
+                "nesting_mode": "list",
+                "forcenew": true,
+                "max_items": 1
+              },
+              "web_policy": {
+                "block": {
+                  "attributes": {
+                    "authorizer_id": {
+                      "type": "string",
+                      "description": "The ID of the backend custom authorization.",
+                      "optional": true
+                    },
+                    "backend_address": {
+                      "type": "string",
+                      "description": "The backend service address",
+                      "optional": true
+                    },
+                    "effective_mode": {
+                      "type": "string",
+                      "description": "The effective mode of the backend policy.",
+                      "optional": true,
+                      "default": "ANY"
+                    },
+                    "host_header": {
+                      "type": "string",
+                      "description": "The proxy host header.",
+                      "optional": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the web policy.",
+                      "required": true
+                    },
+                    "path": {
+                      "type": "string",
+                      "description": "The backend request address.",
+                      "required": true
+                    },
+                    "request_method": {
+                      "type": "string",
+                      "description": "The backend request method of the API.",
+                      "required": true
+                    },
+                    "request_protocol": {
+                      "type": "string",
+                      "description": "The backend request protocol.",
+                      "optional": true
+                    },
+                    "retry_count": {
+                      "type": "number",
+                      "description": "The number of retry attempts to request the backend service.",
+                      "optional": true,
+                      "default": -1
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "description": "The timeout for API requests to backend service.",
+                      "optional": true,
+                      "default": 5000
+                    },
+                    "vpc_channel_id": {
+                      "type": "string",
+                      "description": "The VPC channel ID.",
+                      "optional": true
+                    }
+                  },
+                  "block_types": {
+                    "backend_params": {
+                      "block": {
+                        "attributes": {
+                          "description": {
+                            "type": "string",
+                            "description": "The description of the parameter.",
+                            "optional": true
+                          },
+                          "location": {
+                            "type": "string",
+                            "description": "Where the parameter is located.",
+                            "required": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "The parameter name.",
+                            "required": true
+                          },
+                          "system_param_type": {
+                            "type": "string",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The parameter type.",
+                            "required": true
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the parameter",
+                            "required": true
+                          }
+                        },
+                        "description": "The configuration list of the backend parameters."
+                      },
+                      "nesting_mode": "set"
+                    },
+                    "conditions": {
+                      "block": {
+                        "attributes": {
+                          "cookie_name": {
+                            "type": "string",
+                            "description": "The cookie parameter name.",
+                            "optional": true
+                          },
+                          "frontend_authorizer_name": {
+                            "type": "string",
+                            "description": "The frontend authentication parameter name.",
+                            "optional": true
+                          },
+                          "mapped_param_location": {
+                            "type": "string",
+                            "description": "The location of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "mapped_param_name": {
+                            "type": "string",
+                            "description": "The name of a parameter generated after orchestration.",
+                            "optional": true
+                          },
+                          "param_name": {
+                            "type": "string",
+                            "description": "The request parameter name.",
+                            "optional": true
+                          },
+                          "source": {
+                            "type": "string",
+                            "description": "The type of the backend policy.",
+                            "optional": true,
+                            "default": "param"
+                          },
+                          "sys_name": {
+                            "type": "string",
+                            "description": "The gateway built-in parameter name.",
+                            "optional": true
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The condition type.",
+                            "optional": true,
+                            "default": "Equal"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "The value of the backend policy.",
+                            "required": true
+                          }
+                        },
+                        "description": "The policy conditions."
+                      },
+                      "nesting_mode": "set",
+                      "min_items": 1,
+                      "max_items": 5
+                    }
+                  },
+                  "description": "The web policy backends."
+                },
+                "nesting_mode": "set",
+                "max_items": 5
+              }
+            }
+          },
+          "product": {
+            "short": "APIG",
+            "name": "API Gateway",
+            "catalog": "Middleware",
+            "name_cn": "API网关",
+            "catalog_cn": "应用中间件"
+          }
+        }
+      }
+    }
+  }
+}

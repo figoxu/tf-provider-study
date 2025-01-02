@@ -1,0 +1,23 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dis_stream
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DIS
+paths:
+    /v2/{project_id}/stream/{id}/tags/action:
+        POST:
+            tag: DIS
+    /v2/{project_id}/streams:
+        POST:
+            tag: DIS
+    /v2/{project_id}/streams/{streamName}:
+        DELETE:
+            tag: DIS
+        GET:
+            tag: DIS
+        PUT:
+            tag: DIS

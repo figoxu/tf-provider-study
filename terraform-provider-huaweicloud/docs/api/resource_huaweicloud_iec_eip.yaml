@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_iec_eip
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: IEC
+paths:
+    /v1/publicips:
+        POST:
+            tag: IEC
+    /v1/publicips/{publicip_id}:
+        DELETE:
+            tag: IEC
+        GET:
+            tag: IEC
+        PUT:
+            tag: IEC

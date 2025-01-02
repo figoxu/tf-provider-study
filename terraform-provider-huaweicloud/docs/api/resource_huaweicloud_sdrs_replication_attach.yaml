@@ -1,0 +1,19 @@
+info:
+    version: ""
+    title: resource_huaweicloud_sdrs_replication_attach
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: SDRS
+paths:
+    /v1/{project_id}/protected-instances/{id}:
+        GET:
+            tag: SDRS
+    /v1/{project_id}/protected-instances/{instanceID}/attachreplication:
+        POST:
+            tag: SDRS
+    /v1/{project_id}/protected-instances/{instanceID}/detachreplication/{replicationID}:
+        DELETE:
+            tag: SDRS

@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_modelarts_resource_pool
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: ModelArts
+paths:
+    /v2/{project_id}/pools:
+        POST:
+            tag: ModelArts
+    /v2/{project_id}/pools/{id}:
+        DELETE:
+            tag: ModelArts
+        GET:
+            tag: ModelArts
+        PATCH:
+            tag: ModelArts

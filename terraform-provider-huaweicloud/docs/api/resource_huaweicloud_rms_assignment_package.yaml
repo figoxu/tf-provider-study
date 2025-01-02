@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_rms_assignment_package
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: Config
+paths:
+    /v1/resource-manager/domains/{domain_id}/conformance-packs:
+        POST:
+            tag: Config
+    /v1/resource-manager/domains/{domain_id}/conformance-packs/{id}:
+        DELETE:
+            tag: Config
+        GET:
+            tag: Config
+        PUT:
+            tag: Config

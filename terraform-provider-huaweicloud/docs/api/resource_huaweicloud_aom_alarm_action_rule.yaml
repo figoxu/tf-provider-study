@@ -1,0 +1,20 @@
+info:
+    version: ""
+    title: resource_huaweicloud_aom_alarm_action_rule
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: AOM
+paths:
+    /v2/{project_id}/alert/action-rules:
+        DELETE:
+            tag: AOM
+        POST:
+            tag: AOM
+        PUT:
+            tag: AOM
+    /v2/{project_id}/alert/action-rules/{rule_name}:
+        GET:
+            tag: AOM

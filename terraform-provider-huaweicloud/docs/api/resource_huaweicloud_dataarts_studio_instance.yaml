@@ -1,0 +1,16 @@
+info:
+    version: ""
+    title: resource_huaweicloud_dataarts_studio_instance
+    description: ""
+schemes:
+    - https
+host: huaweicloud.com
+tags:
+    - name: DataArtsStudio
+paths:
+    /v1/{project_id}/instances:
+        GET:
+            tag: DataArtsStudio
+    /v1/{project_id}/instances/onekey-purchase:
+        POST:
+            tag: DataArtsStudio
